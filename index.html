@@ -7,6 +7,29 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
 </head>
+
+    <script>
+const el = document.getElementById("unscramble");
+const text = el.textContent;
+const chars = "!@#$%^&*()-_=+[]{};:,.<>?/|\\";
+let iteration = 0;
+
+const interval = setInterval(() => {
+  el.textContent = text
+    .split("")
+    .map((char, i) => {
+      if (i < iteration) return char;
+      return chars[Math.floor(Math.random() * chars.length)];
+    })
+    .join("");
+
+  if (iteration >= text.length) clearInterval(interval);
+  iteration += 1 / 2; // controls speed (lower is slower)
+}, 40);
+</script>
+
+
+    
 <body>
     <header>
         <nav>
@@ -14,7 +37,7 @@
             <a href="cv.pdf">CV</a>
             <a href="https://github.com/dev-kar1">GitHub</a>
         </nav>
-        <h1 class="name-header">Debadatta Kar</h1>
+       <h1 class="name-header" id="unscramble">Debadatta Kar</h1>
         <p>PhD Student, Department of Electrical Engineering and Computer Science<br> Indian Institute of Science Education and Research, Bhopal</p>
 
     </header>
