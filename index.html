@@ -7,29 +7,6 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
 </head>
-
-    <script>
-const el = document.getElementById("unscramble");
-const text = el.textContent;
-const chars = "!@#$%^&*()-_=+[]{};:,.<>?/|\\";
-let iteration = 0;
-
-const interval = setInterval(() => {
-  el.textContent = text
-    .split("")
-    .map((char, i) => {
-      if (i < iteration) return char;
-      return chars[Math.floor(Math.random() * chars.length)];
-    })
-    .join("");
-
-  if (iteration >= text.length) clearInterval(interval);
-  iteration += 1 / 2; // controls speed (lower is slower)
-}, 40);
-</script>
-
-
-    
 <body>
     <header>
         <nav>
@@ -93,5 +70,25 @@ Before this I worked as a Guest Faculty in Mathematics in Department of Mathemat
         <p>debadatta24[at]iiserb[dot]ac[dot]in</p>
         
     </footer>
+
+<script>
+const el = document.getElementById("unscramble");
+const text = el.textContent;
+const chars = "!@#$%^&*()-_=+[]{};:,.<>?/|\\";
+let iteration = 0;
+
+const interval = setInterval(() => {
+  el.textContent = text
+    .split("")
+    .map((char, i) => {
+      if (i < iteration) return char;
+      return chars[Math.floor(Math.random() * chars.length)];
+    })
+    .join("");
+
+  if (iteration >= text.length) clearInterval(interval);
+  iteration += 1 / 2; // controls speed (lower is slower)
+}, 40);
+</script>
 </body>
 </html>
