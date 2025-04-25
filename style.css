@@ -34,3 +34,14 @@ code {
   border-radius: 4px;
   font-size: 0.95em;
 }
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 20px auto;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
