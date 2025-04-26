@@ -12,84 +12,80 @@
         <nav>
             <a href="index.html">Home</a>
             <a href="now.html">Now</a>
+            <a href="research.html">Research</a>
+            <a href="publications.html">Publications</a>
+            <a href="blog.html">Blog</a>
             <a href="cv.pdf">CV</a>
             <a href="https://github.com/dev-kar1">GitHub</a>
         </nav>
-       <h1 class="name-header" id="unscramble">Debadatta Kar</h1>
-        <p>PhD Student, Department of Electrical Engineering and Computer Science<br> Indian Institute of Science Education and Research, Bhopal</p>
-
+        <h1 class="name-header" id="unscramble">Debadatta Kar</h1>
+        <p>PhD Student, Department of Electrical Engineering and Computer Science<br>Indian Institute of Science Education and Research, Bhopal</p>
     </header>
 
     <main>
         <img src="assets/profile.jpg" alt="Debadatta Kar" class="profile-pic" />
-        <h1></h1>
-        <p></p>
 
         <section>
-            <h2 class="pink-header">About Me</h2>
-            <p> Hi! 
-Welcome to my homepage.
-I am a PhD Student at IISER Bhopal from August 2024 in Electrical Engineering and Computer Science (EECS) department entitled with the <a href="https://pib.gov.in/PressReleaseIframePage.aspx?PRID=1883486" target="_blank" rel="noopener noreferrer">Visvesvaraya PhD fellowship</a>
-. Currently I am working on Cryptography.<br>
-Before this I worked as a Guest Faculty in Mathematics in Department of Mathematics and Sciences at <a href="https://govtpolysonepur.org/" target="_blank" rel="noopener noreferrer">Government Polytechnic Sonepur</a> and thereafter I have worked as a Junior Research Fellow (JRF) in a SERB funded Project on Quantum Computing. (see work profile)
-<br>I have done Integrated M.Sc. in Mathematics from <a href="https://www.vssut.ac.in/" target="_blank" rel="noopener noreferrer">Veer Surendra Sai University Of Technology (VSSUT), Burla</a>.</p>
-<p>I can be addressed as Dev or Deb in short..</p>
+            <h2 class="pink-text">About Me</h2>
+            <p>Hi! Welcome to my homepage. I am a PhD Student at IISER Bhopal from August 2024 in Electrical Engineering and Computer Science (EECS) department entitled with the <a href="https://pib.gov.in/PressReleaseIframePage.aspx?PRID=1883486" target="_blank" rel="noopener noreferrer">Visvesvaraya PhD fellowship</a>. Currently I am working on Cryptography.<br>
+            Before this I worked as a Guest Faculty in Mathematics in Department of Mathematics and Sciences at <a href="https://govtpolysonepur.org/" target="_blank" rel="noopener noreferrer">Government Polytechnic Sonepur</a> and thereafter I have worked as a Junior Research Fellow (JRF) in a SERB funded Project on Quantum Computing. (see work profile)<br>
+            I have done Integrated M.Sc. in Mathematics from <a href="https://www.vssut.ac.in/" target="_blank" rel="noopener noreferrer">Veer Surendra Sai University Of Technology (VSSUT), Burla</a>.</p>
+            <p>I can be addressed as Dev or Deb in short.</p>
         </section>
-        <section>
-            <h2>Teaching</h2>
-            <p>Teaching Assitant (TA) for the following courses at IISER Bhopal</p>
-                    <ul>
-                          <li class="blue-text">ECSxxx: xxxxxxxxxxxxxxxxxxxxxxx (Fall 2025)</li>
-                          <li class="pink-text">ECS102: Introduction to Programming (Spring 2025)</li>
-                          <li class="pink-text">ECS201: Discrete Mathematics I (Fall 2024)</li>
-                    </ul>
 
-                   
-                   
-                  
-        </section>
         <section>
-            <h2>Publications</h2>
-             <p> [Add your Publications here ]</p>
+            <h2 class="pink-text">Teaching</h2>
+            <p>Teaching Assistant (TA) for the following courses at IISER Bhopal</p>
+            <ul>
+                <li class="blue-text">ECSxxx: xxxxxxxxxxxxxxxxxxxxxxx (Fall 2025)</li>
+                <li class="pink-text">ECS102: Introduction to Programming (Spring 2025)</li>
+                <li class="pink-text">ECS201: Discrete Mathematics I (Fall 2024)</li>
+            </ul>
         </section>
+
         <section>
-            <h2>Projects</h2>
-             <p> [Add your Projects here ]</p>
+            <h2 class="pink-text">Publications</h2>
+            <p>[Add your Publications here]</p>
         </section>
+
+        <section>
+            <h2 class="pink-text">Projects</h2>
+            <p>[Add your Projects here]</p>
+        </section>
+
         <p class="blue-text">blue.</p>
         <p class="pink-text">pink.</p>
         <ul>
-  <li>First item</li>
-  <li>Second item</li>
-  <li>Third item</li>
-</ul>
+            <li>First item</li>
+            <li>Second item</li>
+            <li>Third item</li>
+        </ul>
     </main>
 
     <footer>
         <p>Contact:</p>
         <p>dev[underscore]kar[at]outlook[dot]in</p>
         <p>debadatta24[at]iiserb[dot]ac[dot]in</p>
-        
     </footer>
 
-<script>
-const el = document.getElementById("unscramble");
-const text = el.textContent;
-const chars = "!@#$%^&*()-_=+[]{};:,.<>?/|\\";
-let iteration = 0;
+    <script>
+    const el = document.getElementById("unscramble");
+    const text = el.textContent;
+    const chars = "!@#$%^&*()-_=+[]{};:,.<>?/|\\";
+    let iteration = 0;
 
-const interval = setInterval(() => {
-  el.textContent = text
-    .split("")
-    .map((char, i) => {
-      if (i < iteration) return char;
-      return chars[Math.floor(Math.random() * chars.length)];
-    })
-    .join("");
+    const interval = setInterval(() => {
+      el.textContent = text
+        .split("")
+        .map((char, i) => {
+          if (i < iteration) return char;
+          return chars[Math.floor(Math.random() * chars.length)];
+        })
+        .join("");
 
-  if (iteration >= text.length) clearInterval(interval);
-  iteration += 1 / 2; // controls speed (lower is slower)
-}, 40);
-</script>
+      if (iteration >= text.length) clearInterval(interval);
+      iteration += 1 / 2; // controls speed (lower is slower)
+    }, 40);
+    </script>
 </body>
 </html>
