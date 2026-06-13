@@ -59,9 +59,27 @@
       <p> Currently, I am exploring lattices, which are mathematical objects arranged in a periodic fashion.</p>
     </section>
     
-    <div class="container">
-      <img src="assets/lattice.jpg" alt="lattice" width="500" height="333">
-    </div>
+    <style>
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Centers vertically on the screen */
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+  }
+
+  .container img {
+    max-width: 100%;
+    height: auto; /* Keeps the image from distorting */
+    display: block;
+  }
+</style>
+
+<div class="container">
+  <img src="assets/lattice.jpg" alt="lattice" width="500" height="333">
+</div>
     
     <section>
       <h2 class="pink-text">Work Snippet</h2>
